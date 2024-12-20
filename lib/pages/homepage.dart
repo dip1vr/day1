@@ -7,15 +7,10 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar( 
-          title: Text('flutter app'),
-        ),
+          title: Text('flutter app'),),
         body: Center(
           child: Container(
-
-            child: Text(
-              'Hello,Flutter!',
-              style: TextStyle(fontSize: 24, color: Colors.blue),
-            ),
+            child: Text('Hello,Flutter!', style: TextStyle(fontSize: 24, color: Colors.blue),),
           ),
         ),
         drawer: Drawer(),

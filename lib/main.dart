@@ -1,22 +1,28 @@
-import 'package:day1/homepage.dart';
+import 'package:day1/pages/homepage.dart';
+import 'package:day1/pages/login_page.dart';
 import 'package:flutter/material.dart';
-
-    final int days = 30;
-    final String hello = "hello";
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  @override
-
-  
+  @override  
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
-      home: Homepage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.red
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark),
+        initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => Homepage(), 
+        "/Login": (context) => LoginPage(),
+      },
     );
+    
   }
 }
